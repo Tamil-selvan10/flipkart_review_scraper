@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<style>
+    table, th, td {
+      border:1px solid black;
+      border-collapse: collapse;
+    }
+    .center {
+  text-align: center;
+  color: blue;
+}
+    </style>
+
+
+
+<body>
+
+    <h1 class="center">Flipkart Reviews</h1>
+
+   <table style="width:75%">
+      <tr>
+         <th>Product</th>
+         <th>Name</th>
+         <th>Place</th>
+         <th>Date</th>
+         <th>Rating</th>
+         <th>Short comments</th>
+         <th width="230">Long Comments</th>
+      </tr>
+         {% for review in reviews %}
+      <tr>
+        <td>{{review['Product']}}</td>
+         <td>{{review['Name']}}</td>
+         <td>{{review['Place']}}</td>
+         <td>{{review['Date']}}</td>
+         <td>{{review['Rating']}}</td>
+         <td>{{review['Short_comments']}}</td>
+         <td>{{review['Long_comments']}}</td>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
